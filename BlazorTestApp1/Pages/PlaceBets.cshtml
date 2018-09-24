@@ -1,6 +1,7 @@
-﻿@page "/PassLine"
+﻿@page "/PlaceBets"
 
-<h1>Pass Line Bets 4 - 10</h1>
+<h1><em>Place Bets</em></h1>
+
 <form>
     <div class="form-group">
         <label for="betLocationFormSelect">Bet Location</label>
@@ -18,16 +19,12 @@
         <label for="betAmount">Bet Amount</label>
         <input type="text" class="form-control" bind="@betAmount" placeholder="Bet Amount" />
     </div>
-    <div class="form-group">
-        <label for="oddsBetAmount">Odds Bet Amount</label>
-        <input type="text" class="form-control" bind="@oddsBetAmount" placeholder="Odds Bet Amount" />
-    </div>
+
 </form>
 
 <button type="submit" class="btn btn-primary" onclick="@CalcMainReturn">Calculate</button>
 
 <h1>Main Bet Payout: $@mainBetTotal</h1>
-<h1>Odds Bet Payout: $@oddsBetTotal</h1>
 
 
 
@@ -35,9 +32,7 @@
 
     double betLocation = 0;
     double betAmount = 0;
-    double oddsBetAmount = 0;
     double mainBetTotal= 0.00;
-    double oddsBetTotal = 0.00;
 
 
     void CalcMainReturn()
