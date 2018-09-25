@@ -1,6 +1,6 @@
 ﻿@page "/PassLine"
 
-<h1>Pass Line Bets 4 - 10</h1>
+<h1>Pass Line Bets</h1>
 <form>
     <div class="form-group">
         <label for="betLocationFormSelect">Bet Location</label>
@@ -44,31 +44,38 @@
     {
         if (betLocation == 4)
         {
-            mainBetTotal = 4;
+            mainBetTotal = betAmount;
+            oddsBetTotal = Math.Floor(oddsBetAmount * (2.0));
         }
         else if (betLocation == 5)
         {
-            mainBetTotal = 5;
+            mainBetTotal = betAmount;
+            oddsBetTotal = Math.Floor(oddsBetAmount * (3.0/2.0));
         }
         else if (betLocation == 6)
         {
-            mainBetTotal = 6;
+            mainBetTotal = betAmount;
+            oddsBetTotal = Math.Floor(oddsBetAmount * (6.0/5.0));
         }
         else if (betLocation == 8)
         {
-            mainBetTotal = 8;
+            mainBetTotal = betAmount;
+            oddsBetTotal = Math.Floor(oddsBetAmount * (6.0/5.0));
         }
         else if (betLocation == 9)
         {
-            mainBetTotal = 9;
+            mainBetTotal = betAmount;
+            oddsBetTotal = Math.Floor(oddsBetAmount * (3.0/2.0));
         }
         else if (betLocation == 10)
         {
-            mainBetTotal = 10;
+            mainBetTotal = betAmount;
+            oddsBetTotal = Math.Floor(oddsBetAmount * (2.0));
         }
-        else
+        else // this should never execute
         {
             mainBetTotal = -3;
+            oddsBetTotal = -3;
         }
     }
 }

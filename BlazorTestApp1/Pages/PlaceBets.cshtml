@@ -1,6 +1,6 @@
 ﻿@page "/PlaceBets"
 
-<h1><em>Place Bets</em></h1>
+<h1>Point Area Place Bets</h1>
 
 <form>
     <div class="form-group">
@@ -39,27 +39,27 @@
     {
         if (betLocation == 4)
         {
-            mainBetTotal = 4;
+            mainBetTotal = Math.Floor(betAmount * (9.0 / 5.0));
         }
         else if (betLocation == 5)
         {
-            mainBetTotal = 5;
+            mainBetTotal = Math.Floor(betAmount * (7.0/ 5.0));
         }
         else if (betLocation == 6)
         {
-            mainBetTotal = 6;
+            mainBetTotal = Math.Floor(betAmount * (7.0 / 6.0));
         }
         else if (betLocation == 8)
         {
-            mainBetTotal = 8;
+            mainBetTotal = Math.Floor(betAmount * (7.0 / 6.0));
         }
         else if (betLocation == 9)
         {
-            mainBetTotal = 9;
+            mainBetTotal = Math.Floor(betAmount * (7.0 / 5.0));
         }
         else if (betLocation == 10)
         {
-            mainBetTotal = 10;
+            mainBetTotal = betAmount * (9.0 / 5.0);
         }
         else
         {

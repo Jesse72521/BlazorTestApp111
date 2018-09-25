@@ -14,7 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Pages\HardWays.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Pages\OneTimeBets.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\BuyBets.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Pages\PassLine.cshtml">

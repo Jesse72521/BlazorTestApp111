@@ -1,0 +1,56 @@
+﻿@page "/HardWays"
+
+<h1>Hard Ways Bets</h1>
+<form>
+    <div class="form-group">
+        <label for="betLocationFormSelect">Bet Location</label>
+        <select class="form-control" id="betLocationFormSelect" bind="@betLocation">
+            <option>Hard 4</option>
+            <option>Hard 6</option>
+            <option>Hard 8</option>
+            <option>Hard 10</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="betAmount">Bet Amount</label>
+        <input type="text" class="form-control" bind="@betAmount" placeholder="Bet Amount" />
+    </div>
+</form>
+
+<button type="submit" class="btn btn-primary" onclick="@CalcMainReturn">Calculate</button>
+
+<h1>Main Bet Payout: $@mainBetTotal</h1>
+
+
+
+@functions {
+
+    string betLocation = "";
+    double betAmount = 0;
+    double mainBetTotal= 0.00;
+
+
+    void CalcMainReturn()
+    {
+        if (betLocation == "Hard 4")
+        {
+            mainBetTotal = betAmount * 7;
+        }
+        else if (betLocation == "Hard 6")
+        {
+            mainBetTotal = betAmount * 9;
+        }
+        else if (betLocation == "Hard 8")
+        {
+            mainBetTotal = betAmount * 9;
+        }
+        else if (betLocation == "Hard 10")
+        {
+            mainBetTotal = betAmount * 7;
+        }
+        else
+        {
+            mainBetTotal = -3;
+        }
+    }
+}
